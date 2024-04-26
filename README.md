@@ -25,3 +25,6 @@ If the network interface auto detect does not work you can find the interface yo
 ip --color=auto addr show
 ```
 ![figure 01](eg01.png)
+
+In the above example the active interface is **eno1**
+

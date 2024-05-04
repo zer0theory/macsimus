@@ -24,7 +24,7 @@ read -p "Enter your network interface: " iface
 
 if [ -z "$iface" ]
 then
-  iface=$(ip addr show | grep '^.* state UP' | cut -d ' ' -f2 | sed 's/:$//')
+  iface=$(ip a | grep '^.* state UP' | cut -d ' ' -f2 | sed 's/:$//')
 #	iface=$(ip r show|grep -F " src "|cut -d " " -f 3)
 fi
 

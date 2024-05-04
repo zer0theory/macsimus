@@ -23,7 +23,7 @@ sudo bash macsimus.sh
 If the network interface auto detect does not work you can find the interface yourself using this command from a terminal.
 
 ```sh
-ip --color=auto addr show
+ip --color=auto a
 ```
 ![figure 01](eg01.png)
 

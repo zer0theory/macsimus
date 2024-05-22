@@ -14,7 +14,7 @@
 ################################################
 
 # Checking for sudo
-if [ "$EUID" -ne 0 ]
+if [[ "$EUID" -ne 0 ]]
   then printf "Please run with sudo \n"
 	exit 1
 fi
@@ -23,7 +23,7 @@ fi
 printf "Leave blank to attempt self detection\n"
 read -p "Enter your network interface: " iface
 
-if [ -z "$iface" ]
+if [[ -z "$iface" ]]
 then
   iface=$(ip a | grep '^.* state UP' | cut -d ' ' -f2 | sed 's/:$//')
 #	iface=$(ip r show|grep -F " src "|cut -d " " -f 3)
@@ -73,7 +73,7 @@ macInfo () {
 	printf "Your permanent mac address:  %s\n" "$permmac"
 }
 
-if [ -n "$catCheck" ]
+if [[ -n "$catCheck" ]]
 then
 	macInfo | lolcat
 else
@@ -87,7 +87,7 @@ macChange
 finalmac=$(ip link show "$iface"| grep -F "link"| cut -d " " -f 6)
 
 # and print it out
-if [ -n "$catCheck" ]
+if [[ -n "$catCheck" ]]
 then
 	printf "Your new mac address:        %s\n" "$finalmac"|lolcat
 else

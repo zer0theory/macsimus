@@ -14,9 +14,8 @@ macsimus is a fast bash based mac address randomizer for linux systems.
 ```sh
 git clone https://github.com/zer0theory/macsimus.git
 cd macsimus
-sudo bash macsimus.sh
+sudo ./macsimus
 ```
-
 
 ## Troubleshooting
 
